@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
@@ -16,15 +17,30 @@
     <!--Genesys Cloud CSS Formatting End-->
     <script defer src="labpage.js"></script>
 </head>
+
 <body>
     <h1>Genesys Web Messaging & GPE Workshop</h1>
     <br>
     <fieldset style="max-width: 700px;">
         <legend>DeploymentId</legend>
-        <gux-form-field-text-like id="settings1">
-            <input slot="input" type="text" name="a-2" required placeholder="mypurecloud.com" id="region" />
-            <label slot="label">Region    </label>
-        </gux-form-field-text-like>
+        <gux-form-field-dropdown id="settings1">
+            <gux-dropdown filterable placeholder="Select Region" id="region" required>
+                <gux-listbox aria-label="Region">
+                    <gux-option value="mypurecloud.com">mypurecloud.com</gux-option>
+                    <gux-option value="usw2.pure.cloud">usw2.pure.cloud</gux-option>
+                    <gux-option value="mypurecloud.ie">mypurecloud.ie</gux-option>
+                    <gux-option value="mypurecloud.com.au">mypurecloud.com.au</gux-option>
+                    <gux-option value="mypurecloud.jp">mypurecloud.jp</gux-option>
+                    <gux-option value="mypurecloud.de">mypurecloud.de</gux-option>
+                    <gux-option value="cac1.pure.cloud">cac1.pure.cloud</gux-option>
+                    <gux-option value="apne2.pure.cloud">apne2.pure.cloud</gux-option>
+                    <gux-option value="euw2.pure.cloud">euw2.pure.cloud</gux-option>
+                    <gux-option value="aps1.pure.cloud">aps1.pure.cloud</gux-option>
+                    <gux-option value="sae1.pure.cloud">sae1.pure.cloud</gux-option>
+                </gux-listbox>
+            </gux-dropdown>
+            <label slot="label">Region </label>
+        </gux-form-field-dropdown>
         <gux-form-field-text-like id="settings2">
             <input slot="input" type="text" name="a-2" required placeholder="DeploymentId" id="deploymentId" />
             <label slot="label">DeploymentId</label>
