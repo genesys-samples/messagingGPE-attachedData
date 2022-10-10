@@ -4,20 +4,14 @@ chapter: true
 weight: 20
 ---
 
-## Tools You'll Need
+# Tools You'll Need
 
 
-* ### Github 
-    #### - Our repository can be found [here] (https://github.com/genesys-samples/cxAsCodeDevlab)
+* ### A Genesys Cloud ORG
+    Personally I find the best way to learn is by actually doing this live in your lab environment.
 
-* ### New Folder
-    #### - Create and open a folder on your PC where you plan to store code locally. Ex: We created a folder on our Local Disk titled "Dev Projects".
+* ### WebMessenger setup
+    This is not designed as a WebMessenger setup course. This will need to be already congfigured to route to a queue and agent. Later on you will need to supply the DeploymentId that you are using.
 
-* ### GitBash
-    #### -If you are using Git Bash outside of VScode, open Git Bash from this folder by right clicking a blank area within the folder and selecting “Git Bash Here" (see image below)
-    ![Gitbash](/images/gitbash.png)
-    
-* ### Microsoft VS Code
-    #### - Can be downloaded [Here](https://code.visualstudio.com/download)
-    #### -Open VS code from this folder by right clicking a blank area within the folder and selecting "Open With Code" (See image above)
-
+* ### Predective Engagment setup
+    This is not designed as a Predective Engagment setup course. This will need to be already congfigured as part of the WebMessenger Snippet.
