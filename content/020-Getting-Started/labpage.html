@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Removes Google Crawler from indexing page-->
+    <meta name="robots" content="noindex" />
+    <title>WorkShop</title>
+    <!--Genesys Cloud CSS Formatting Start-->
+    <link
+        href="https://dhqbrvplips7x.cloudfront.net/common-ui-docs/genesys-webcomponents/3.29.0-419/genesys-webcomponents/genesys-webcomponents.css"
+        rel="stylesheet">
+    <script type="module"
+        src="https://dhqbrvplips7x.cloudfront.net/common-ui-docs/genesys-webcomponents/3.29.0-419/genesys-webcomponents/genesys-webcomponents.esm.js"></script>
+    <!--Genesys Cloud CSS Formatting End-->
+    <script defer src="labpage.js"></script>
+</head>
+<body>
+    <h1>Genesys Web Messaging & GPE Workshop</h1>
+    <br>
+    <fieldset style="max-width: 700px;">
+        <legend>DeploymentId</legend>
+        <gux-form-field-text-like id="settings1">
+            <input slot="input" type="text" name="a-2" required placeholder="mypurecloud.com" id="region" />
+            <label slot="label">Region    </label>
+        </gux-form-field-text-like>
+        <gux-form-field-text-like id="settings2">
+            <input slot="input" type="text" name="a-2" required placeholder="DeploymentId" id="deploymentId" />
+            <label slot="label">DeploymentId</label>
+        </gux-form-field-text-like>
+        <gux-button onclick="save()" accent="primary">
+            <gux-icon icon-name="ic-iw-save" screenreader-text="Save DeploymentId"></gux-icon><span>Save</span>
+        </gux-button>
+        <gux-button onclick="reset()">
+            <gux-icon icon-name="trashcan" screenreader-text="Reset DeploymentId"></gux-icon><span>Reset</span>
+        </gux-button>
+    </fieldset>
+    <br>
+    <div id="data" hidden>
+        <fieldset style="max-width: 700px;">
+            <legend>Database Plugin</legend>
+            <gux-form-field-text-like>
+                <input slot="input" type="text" placeholder='{ "keyInt": 123, "keyString": "hello" }'
+                    id="customAttributes"></input>
+                <label slot="label">JSON</label>
+            </gux-form-field-text-like>
+            <gux-button onclick="setCustomAttributes()" accent="primary">
+                <gux-icon icon-name="upload" screenreader-text="Attach customAttributes"></gux-icon><span>Set</span>
+            </gux-button>
+            <gux-button onclick="getCustomAttributes()" accent="primary">
+                <gux-icon icon-name="download" screenreader-text="Get customAttributes"></gux-icon><span>Get</span>
+            </gux-button>
+        </fieldset>
+    </div>
+    <br>
+    <div id="card" hidden>
+        <fieldset style="max-width: 700px;">
+            <legend>Commands</legend>
+            <gux-button onclick="pageView()" style="min-width: 150px; padding: 8px;">
+                <gux-icon icon-name="clock" screenreader-text="Page view"></gux-icon><span>PageView Unix</span>
+            </gux-button>
+            <gux-button onclick="home()" style="min-width: 150px; padding: 8px;">
+                <gux-icon icon-name="home" screenreader-text="Home page"></gux-icon><span>PageView Home</span>
+            </gux-button>
+            <gux-button onclick="openChat()" style="min-width: 150px; padding: 8px;">
+                <gux-icon icon-name="chat" screenreader-text="Open chat"></gux-icon><span>Open Chat</span>
+            </gux-button>
+            <gux-button onclick="closeChat()" style="min-width: 150px; padding: 8px;">
+                <gux-icon icon-name="chat-disable" screenreader-text="Close chat"></gux-icon><span>Close Chat</span>
+            </gux-button>
+            <gux-button onclick="addProduct()" style="min-width: 150px; padding: 8px;">
+                <gux-icon icon-name="cjv-product-added" screenreader-text="Add product"></gux-icon><span>Add
+                    Product</span>
+            </gux-button>
+            <gux-button onclick="removeProduct()" style="min-width: 150px; padding: 8px;">
+                <gux-icon icon-name="cjv-product-removed" screenreader-text="Recmove product"></gux-icon>
+                <span>Remove Product</span>
+            </gux-button>
+            <gux-button onclick="triggerTest()" style="min-width: 150px; padding: 8px;">
+                <gux-icon icon-name="bolt" screenreader-text="Trigger test"></gux-icon><span>Journey Record</span>
+            </gux-button>
+        </fieldset>
+    </div>
+    <br>
+    <div id="user" hidden>
+        <fieldset style="max-width: 700px;">
+            <legend>User Login Form</legend>
+            <gux-form-field-text-like style="display: inline-block;">
+                <input slot="input" type="text" placeholder='First Name' id="firstName"></input>
+                <label slot="label">First Name</label>
+            </gux-form-field-text-like>
+            <gux-form-field-text-like style="display: inline-block;">
+                <input slot="input" type="text" placeholder='Last Name' id="lastName"></input>
+                <label slot="label">Last Name</label>
+            </gux-form-field-text-like>
+            <gux-form-field-text-like style="display: inline-block;">
+                <input slot="input" type="text" placeholder='Email' id="email"></input>
+                <label slot="label">Email Address</label>
+            </gux-form-field-text-like>
+            <br>
+            <gux-button onclick="login()" accent="primary">
+                <gux-icon icon-name="shield-lock" screenreader-text="login user details"></gux-icon><span>Login</span>
+            </gux-button>
+        </fieldset>
+    </div>
+    <br>
+    <div id="supportCenter" hidden>
+        <fieldset style="max-width: 700px;">
+            <legend>Support Center</legend>
+            <div id="genesys-support-center"></div>
+        </fieldset>
+    </div>
+    <br>
+    <br>
+    <gux-button onclick="clearSession()" style="min-width: 150px; padding: 8px;">
+        <gux-icon icon-name="trashcan" screenreader-text="Clear session"></gux-icon><span>Clear
+            Session</span>
+    </gux-button>
+</body>
+
+</html>
