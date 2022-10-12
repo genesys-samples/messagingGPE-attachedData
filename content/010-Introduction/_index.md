@@ -12,7 +12,7 @@ With WebMesseaging the single "snippet" is able to do both the Async Messaging a
 
 ![](/010-introduction/enable_gpe.png?raw=true)
 
-NOTE: If enabled consider the pricing details found [HERE](https://help.mypurecloud.com/articles/predictive-engagement-event-pricing/) This workshop is not designed as a GPE setup course
+NOTE: If enabled consider the "Pay As You Go" pricing details found [HERE](https://help.mypurecloud.com/articles/predictive-engagement-event-pricing/) This workshop is not designed as a GPE setup course.
 
 It critical to understand that their are two seprate data loctions that can be used to store data. 
 
