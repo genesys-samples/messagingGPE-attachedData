@@ -4,7 +4,7 @@ chapter: false
 weight: 20
 ---
 
-## Predective Engagement Data (record)
+## Predictive Engagement Data (record)
 
 You can also use GPE to append data to the "Journey" as a "Record" event. This then has the advantage of not only being able to be used by Arcitect but also by default then becomes avaliable to be visually shown to the agent. These events can then also be used to trigger both a [Segment](https://all.docs.genesys.com/ATC/Current/AdminGuide/About_segments) and an [Action Map](https://all.docs.genesys.com/ATC/Current/AdminGuide/About_action_maps)
 

@@ -13,5 +13,5 @@ weight: 20
 * ### WebMessenger setup
     This is not designed as a WebMessenger setup course. This will need to be already congfigured to route to a queue and agent. Later on you will need to supply the DeploymentId that you are using.
 
-* ### Predective Engagment setup
-    This is not designed as a Predective Engagment setup course. This will need to be already congfigured as part of the WebMessenger Snippet.
+* ### Predictive Engagment setup
+    This is not designed as a Predictive Engagment setup course. This will need to be already congfigured as part of the WebMessenger Snippet.

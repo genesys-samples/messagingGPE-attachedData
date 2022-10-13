@@ -4,7 +4,7 @@ chapter: false
 weight: 10
 ---
 
-## Predective Engagement Data (attributes)
+## Predictive Engagement Data (attributes)
 
 There are actually a few ways to store data to the web session but before we even start doing that lets look at what you get OOTB with the default GPE tracking snippet as there is a LOT of context you get be default without even having to manually attached meta data. These values are then also nativly avalible inside Arcitect as you will soon see.
 
@@ -99,7 +99,7 @@ There are actually a few ways to store data to the web session but before we eve
 }
 ```
 
-Now to access these default values you simply need to access them via the "Journey" block in Arcitect to get the "sessionId" then the objects are exposed for you to use. One of the main use cases people as me for is the last page URL as well as the location as they want to treat people different that are "in country" vers browsing from outside the local country. With this default data inside the GPE session you get that and more !!!
+Now to access these default values you simply need to access them via the "Journey" block in Arcitect to get the "sessionId" then the objects are exposed for you to use. One of the main use cases people ask me for is the last page URL as well as the location as they want to treat people different that are "in country" vers browsing from outside the local country. With this default data inside the GPE session you get that and more !!!
 
 ## Access the data in Arcitect
 
@@ -127,7 +127,7 @@ So if you wanted to know the country that the use was browsing from based on the
 
 As this output is a "String" this is the format it will be in. You will also see there are "collections" or as I prefer to call them "Arrays" also of data including the "Segments" these are the SegmentIds that have been associated with this web session and are also very handy to be used in the routing design.
 
-While you can trigger a different "Flow" based on the "Aciton Map" configuration in GPE now days this does then force you to make many differnet "Flows" personally I like to have the 1x Flow and then use the Segment data in the session to do the personlisation that way then you only need 1x flow to maintain and update when changes are required.
+While you can trigger a different "Flow" based on the "Aciton Map" configuration in GPE, this does then force you to make many differnet "Flows". Personally I like to have the 1x Flow and then use the Segment data in the session to do the personlisation that way then you only need 1x flow to maintain and update when changes are required.
 
 ### Future
 
